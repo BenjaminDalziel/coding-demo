@@ -8,7 +8,7 @@ graphics.off()
 
 # Parameters
 mean_abundance <- 1000
-noise_level <- 3
+noise_level <- 300
 ntimepoints <- 150
 
 
@@ -16,6 +16,10 @@ ntimepoints <- 150
 pop_size <- rnorm(n = ntimepoints,
                   mean = mean_abundance,
                   sd = noise_level)
+
+
+# Round population sizes up to the nearest integrer
+pop_size <- ceiling(pop_size)
 
 
 # Diagnostic plot
