@@ -24,8 +24,8 @@ R <- pop_size_now / pop_size_lasttime
 
 
 # Check for density dependence
-per_cap_growth <- R / pop_size
+per_cap_growth <- R / pop_size_lasttime
 par(cex = 3)
-plot(pop_size, per_cap_growth,
+plot(pop_size_lasttime, per_cap_growth,
      xlab = "Population size",
      ylab = "Per cap. growth rate")
